@@ -42,12 +42,8 @@ export function TaskList() {
   }
 
   function handleRemoveTask(id: number) {
-    const taskIndex = tasks.findIndex(task => task.id === id)
-
-    if (taskIndex > -1) {
-      const allTasks = tasks.filter(task => task.id !== id)
-      setTasks(allTasks)
-    }
+    const allTasks = tasks.filter(task => task.id !== id)
+    setTasks(allTasks)
   }
 
   return (
